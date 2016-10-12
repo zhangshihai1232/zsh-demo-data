@@ -16,6 +16,7 @@
         <module>jdbc</module>
         <module>mertrics</module>
         <module>nio</module>
+        <module>kafka</module>
     </modules>
 
     <properties>
@@ -32,6 +33,8 @@
         <log4j-over-slf4j.version>1.7.5</log4j-over-slf4j.version>
         <logback-core.version>1.1.7</logback-core.version>
         <guava.version>19.0</guava.version>
+        <kafka_2.11.version>0.10.0.1</kafka_2.11.version>
+        <junit.version>4.12</junit.version>
     </properties>
 
     <dependencyManagement>
@@ -56,7 +59,18 @@
             </dependency>
 
             <!--====================================-->
-            <!--               hadoop                  -->
+            <!--         data platform              -->
+            <!--====================================-->
+            <dependency>
+                <groupId>org.apache.kafka</groupId>
+                <artifactId>kafka_2.11</artifactId>
+                <version>${kafka_2.11.version}</version>
+            </dependency>
+
+
+
+            <!--====================================-->
+            <!--               hadoop               -->
             <!--====================================-->
             <!--hadoop-->
             <dependency>
@@ -160,9 +174,8 @@
             </dependency>
             <dependency>
                 <groupId>junit</groupId>
-                <artifactId>junit-dep</artifactId>
-                <version>${junit-dep.version}</version>
-                <!--<scope>test</scope>-->
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
             </dependency>
         </dependencies>
 

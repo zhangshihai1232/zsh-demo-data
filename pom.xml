@@ -17,6 +17,9 @@
         <module>mertrics</module>
         <module>nio</module>
         <module>kafka</module>
+        <module>netty</module>
+        <module>guava</module>
+        <module>JCommander</module>
     </modules>
 
     <properties>
@@ -35,6 +38,8 @@
         <guava.version>19.0</guava.version>
         <kafka_2.11.version>0.10.0.1</kafka_2.11.version>
         <junit.version>4.12</junit.version>
+        <netty-all.version>4.1.6.Final</netty-all.version>
+        <jcommander.version>1.58</jcommander.version>
     </properties>
 
     <dependencyManagement>
@@ -56,6 +61,11 @@
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.beust</groupId>
+                <artifactId>jcommander</artifactId>
+                <version>${jcommander.version}</version>
             </dependency>
 
             <!--====================================-->
@@ -112,6 +122,14 @@
             </dependency>
 
             <!--====================================-->
+            <!--               net                  -->
+            <!--====================================-->
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-all</artifactId>
+                <version>${netty-all.version}</version>
+            </dependency>
+            <!--====================================-->
             <!--               spring                  -->
             <!--====================================-->
             <!--spring配置相关-->
@@ -162,7 +180,6 @@
                 <artifactId>logback-core</artifactId>
                 <version>${logback-core.version}</version>
             </dependency>
-
             <!--====================================-->
             <!--               test                  -->
             <!--====================================-->

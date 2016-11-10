@@ -15,6 +15,7 @@
         <module>concurrent</module>
         <module>stream</module>
         <module>loader</module>
+        <module>jdk8</module>
     </modules>
 
     <dependencyManagement>
